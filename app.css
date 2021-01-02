@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto sans",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #2c3e50;
+  color: white;
+}
+
+header {
+  width: 100%;
+  padding: 8px 0;
+}
+
+h1,
+h2 {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 0.5rem;
+  font-weight: lighter;
+}
+
+.playground {
+  background-color: #34495e;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.results {
+  transform: translateY(-50px);
+  height: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+}
+
+@-webkit-keyframes slide {
+  from {
+    transform: translateY(-50px);
+  }
+  30% {
+    transform: translateY(20px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-50px);
+  }
+  5% {
+    transform: translateY(0);
+  }
+
+  95% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+.alert {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.show {
+  -webkit-animation: slide 3s ease-in-out;
+  animation: slide 3s ease-in-out;
+}
+
+.player {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px 0;
+}
+
+.win {
+  background-color: rgba(29, 209, 161, 0.6);
+}
+
+.loose {
+  background-color: rgba(238, 82, 83, 0.6);
+}
+
+.item {
+  width: 50px;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+}
+
+.item:hover {
+  background-color: hotpink;
+}
+
+.item img {
+  height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  h1,
+  h2 {
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
