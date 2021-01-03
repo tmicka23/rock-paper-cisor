@@ -1,22 +1,22 @@
 const rockElem = document.getElementById("rock");
 const paperElem = document.getElementById("paper");
-const cisorElem = document.getElementById("cisor");
+const scissorsElem = document.getElementById("scissors");
 const resultsElem = document.getElementById("results");
 const playerElem = document.querySelector(".player");
 
 const objects = [
   {
     name: "rock",
-    win: "cisor",
+    win: "scissors",
     loose: "paper",
   },
   {
     name: "paper",
     win: "rock",
-    loose: "cisor",
+    loose: "scissors",
   },
   {
-    name: "cisor",
+    name: "scissors",
     win: "paper",
     loose: "rock",
   },
@@ -76,8 +76,8 @@ paperElem.addEventListener("click", (e) => {
   startPlay("paper");
 });
 
-cisorElem.addEventListener("click", (e) => {
+scissorsElem.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
-  startPlay("cisor");
+  startPlay("scissors");
 });

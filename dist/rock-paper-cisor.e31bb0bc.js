@@ -120,19 +120,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 var rockElem = document.getElementById("rock");
 var paperElem = document.getElementById("paper");
-var cisorElem = document.getElementById("cisor");
+var scissorsElem = document.getElementById("scissors");
 var resultsElem = document.getElementById("results");
 var playerElem = document.querySelector(".player");
 var objects = [{
   name: "rock",
-  win: "cisor",
+  win: "scissors",
   loose: "paper"
 }, {
   name: "paper",
   win: "rock",
-  loose: "cisor"
+  loose: "scissors"
 }, {
-  name: "cisor",
+  name: "scissors",
   win: "paper",
   loose: "rock"
 }];
@@ -186,10 +186,10 @@ paperElem.addEventListener("click", function (e) {
   e.stopPropagation();
   startPlay("paper");
 });
-cisorElem.addEventListener("click", function (e) {
+scissorsElem.addEventListener("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
-  startPlay("cisor");
+  startPlay("scissors");
 });
 },{}],"../../.nvm/versions/node/v12.16.3/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -219,7 +219,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33369" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36059" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
